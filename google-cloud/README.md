@@ -8,6 +8,6 @@ https://youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 4. running usable terraform command : https://github.com/hilmi-afifi/terraform/blob/master/USABLE.md
 
 
-tf-example = login and tested service accounts auth 
-tf-instance = create bulk compute engine vm instance 
-tf-subnetwork = create network + subnetwork + secondary ip  
+- tf-example = login and tested service accounts auth 
+- tf-instance = create bulk compute engine vm instance 
+- tf-subnetwork = create network + subnetwork + secondary ip  
