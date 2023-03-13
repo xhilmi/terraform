@@ -7,7 +7,7 @@ https://youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 3. create service accounts on GCP
 4. running usable terraform command
 
-# usable terraform command
+# Terraform Usable Command
 - terraform init
 - terraform apply
 - terraform apply -auto-approve
