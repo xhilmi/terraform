@@ -6,3 +6,7 @@ https://youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 2. apt install Google Cloud SDK on master-vm
 3. create service accounts on GCP
 4. running usable terraform command
+
+# Setting IAM Service Accounts 
+1. Create new service accounts : https://prnt.sc/iAg0dkC6QAfg
+2. 
