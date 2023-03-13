@@ -1,3 +1,5 @@
+# this is terraform basic example file
+
 # set provider google cloud on jakarta
 provider "google" {
     project = "project-id"
