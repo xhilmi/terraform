@@ -1,4 +1,4 @@
 # This is a repository terraform 
-## Installing terraform on master vm
-## Connecting terraform to google cloud using service accounts
-## Create some service on google cloud using terraform cli
+- Install terraform on master vm linux ubuntu
+- Connect terraform to GCP using service accounts
+- Create some service on GCP with cli command
