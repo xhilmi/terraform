@@ -11,4 +11,9 @@ https://youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 1. Create new service accounts : https://prnt.sc/iAg0dkC6QAfg
 2. Service accounts detail : https://prnt.sc/IAo8wshSaN7l
 3. Spesify role for user : https://prnt.sc/tNz4JAIFDCZb
-4. Click continue & done : https://prnt.sc/uqQxDVGi6zpF
+4. Continue and done : https://prnt.sc/uqQxDVGi6zpF
+5. Click spesify account : https://prnt.sc/5HrolxIRFXKL
+6. Create JSON new keys : https://prnt.sc/F1gOYco6_V4K
+7. Download and save keys into your master-vm
+8. Create main.tf :
+9. Create main.tfVars :
