@@ -1,6 +1,6 @@
 # set provider google cloud on id jakarta
 provider "google" {
-    project = "first-renderer-376510"
+    project = "project-id"
     region = "asia-southeast2"
     credentials = var.google_credentials
 }
