@@ -9,6 +9,6 @@ https://youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 
 
 # Sitemap repository
-- tf-example = login and tested service accounts auth 
-- tf-instance = create bulk compute engine vm instance 
-- tf-subnetwork = create network + subnetwork + secondary ip  
+- [tf-example](https://github.com/hilmi-afifi/terraform/tree/master/google-cloud/tf-example) = login and tested service accounts auth 
+- [tf-instance](https://github.com/hilmi-afifi/terraform/tree/master/google-cloud/tf-instance) = create bulk compute engine vm instance 
+- [tf-subnetwork](https://github.com/hilmi-afifi/terraform/tree/master/google-cloud/tf-subnetwork) = create network + subnetwork + secondary ip  
