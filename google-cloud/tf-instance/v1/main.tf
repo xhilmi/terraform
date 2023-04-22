@@ -5,6 +5,11 @@ provider "google" {
     credentials = var.google_credentials
 }
 
+variable google_credentials {
+  description = "google_credentials"
+  type        = string
+}
+
 # create 5 instance directly and skip if exist
 resource "google_compute_instance" "instance" {
   count        = 5
