@@ -1,3 +1,8 @@
+variable google_credentials {
+  description = "google_credentials"
+  type        = string
+}
+
 variable machine_zone {
   description = "machine_zone"
   type        = string
