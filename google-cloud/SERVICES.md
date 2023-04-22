@@ -6,5 +6,5 @@
 5. Click spesify account : https://prnt.sc/5HrolxIRFXKL
 6. Create JSON new keys : https://prnt.sc/F1gOYco6_V4K
 7. Download and save keys into your master-vm
-8. Create main.tf : https://github.com/hilmi-afifi/terraform/blob/master/google-cloud/tf-example/main.tf
-9. Create main.tfVars : https://github.com/hilmi-afifi/terraform/blob/master/google-cloud/tf-example/main.tfvars
+8. Create main.tf : https://github.com/hilmi-afifi/terraform/blob/master/google-cloud/tf-example/v1/main.tf
+9. Create main.tfVars : https://github.com/hilmi-afifi/terraform/blob/master/google-cloud/tf-example/v1/main.tfvars
