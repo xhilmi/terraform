@@ -7,7 +7,7 @@
     - gcloud projects list
     - gcloud config set project $PROJECT_ID
     - gcloud compute instances list 
-4. Create Service Accounts GCP: https://github.com/xhilmi/terraform/blob/master/google-cloud/SERVICES.md
+4. Create Service Accounts GCP: https://github.com/xhilmi/terraform/blob/master/google-cloud/README.md#setting-iam-service-accounts
 5. Running Terraform Command: https://github.com/xhilmi/terraform/blob/master/USABLE.md
 
 # Setting IAM Service Accounts 
