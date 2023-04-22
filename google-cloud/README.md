@@ -21,6 +21,37 @@
 8. Create main.tf : https://github.com/xhilmi/terraform/blob/master/google-cloud/tf-example/main.tf
 9. Create main.tfVars : https://github.com/xhilmi/terraform/blob/master/google-cloud/tf-example/main.tfvars
 
+# Usefull Command gCloud CLI 
+- gcloud init
+- gcloud auth login
+- gcloud auth application-default login
+- gcloud projects list
+- gcloud projects list --sort-by=projectId --limit=5
+- gcloud config set project <PROJECT_ID>
+
+- gcloud auth revoke
+- gcloud storage ls
+- gcloud storage buckets list
+- gcloud services list
+
+- gcloud compute instances list
+
+- gcloud compute images list
+- gcloud compute images list --filter="name~'ubuntu'"
+- gcloud compute images list --filter="project~'ubuntu'"
+- gcloud compute images list --filter="family~'ubuntu'"
+
+- gcloud compute instances list
+
+- gcloud compute machine-types list
+- gcloud compute machine-types list --filter="name~'e2' zone~'asia-southeast2'"
+- gcloud compute machine-types list --filter="name:(e2) zone:(asia-southeast2)"
+
+- gcloud compute zones list
+- gcloud compute zones list --filter="name~'asia-southeast'"
+- gcloud compute zones list --filter="region~'asia-southeast'"
+- gcloud compute zones list --filter="name~'asia-southeast' region~'asia-southeast'"
+
 # Sitemap repository
 - [tf-example](https://github.com/xhilmi/terraform/tree/master/google-cloud/tf-example) = login and tested service accounts auth 
 - [tf-instance](https://github.com/xhilmi/terraform/tree/master/google-cloud/tf-instance) = create bulk compute engine vm instance 
