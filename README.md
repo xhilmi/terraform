@@ -10,6 +10,7 @@
   4. running usable terraform command
 
 # Usefull command
+  - git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
   - export AWS_DEFAULT_PROFILE=<PROFILE_NAME>
   - echo $AWS_DEFAULT_PROFILE
   - export AWS_PROFILE=<PROFILE_NAME>
