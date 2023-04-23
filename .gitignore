@@ -1,0 +1,5 @@
+.git
+.terraform
+providers
+registry.terraform.io
+hashicorp
