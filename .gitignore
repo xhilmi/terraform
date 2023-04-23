@@ -1,11 +1,14 @@
-# Others
+# Git Directories
 .git
+
+# git filter bigges .terraform hidden files or directories
+# git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
+
+# Terraform other files or directories 
 .terraform
 providers
 registry.terraform.io
 hashicorp
-
-# git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
 
 # Local .terraform directories
 **/.terraform/*
