@@ -1,8 +1,3 @@
-# variable google_credentials {
-#   description = "google_credentials"
-#   type        = string
-# }
-
 variable credentials {
   description = "credentials"
   type        = list(object({
