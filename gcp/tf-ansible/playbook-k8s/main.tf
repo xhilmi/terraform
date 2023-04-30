@@ -1,6 +1,6 @@
 # define provider
 provider "google" {
-  project     = "first-renderer-376510" # <PROJECT_ID>
+  project     = "agrisoye" # <PROJECT_ID>
   region      = "asia-southeast2"
   credentials = var.credentials[0].google
 }
