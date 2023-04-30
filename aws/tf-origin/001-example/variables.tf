@@ -11,7 +11,7 @@ variable "instance_name" {
 }
 
 variable "instance_type" {
-        default = "t2.micro"
+        default = "t3a.medium"
 }
 
 # https://ap-southeast-1.console.aws.amazon.com/vpc/
@@ -23,7 +23,7 @@ variable "subnet_id" {
 # https://cloud-images.ubuntu.com/locator/ec2/
 variable "ami_id" {
         description = "The AMI to use"
-        default = "ami-0867f2f0e7e53730c"
+        default = "ami-0a72af05d27b49ccb"
 }
 
 variable "number_of_instances" {

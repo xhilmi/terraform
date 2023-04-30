@@ -1,0 +1,6 @@
+---
+- name: Install K8s master
+  shell: "bash <(curl -s https://raw.githubusercontent.com/xhilmi/kubernetes/master/tools/k8s-install-noprompt-master.sh)"
+  args:
+    executable: /bin/bash
+    

@@ -1,0 +1,12 @@
+---
+- name: Install k8s worker
+  hosts: all
+  remote_user: ansible-k8s-worker
+  become: yes
+
+  # become: true
+  # become_user: agrsoye
+  # become_method: sudo
+  
+  roles:
+    - k8s-worker

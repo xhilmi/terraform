@@ -2,7 +2,7 @@
 provider "google" {
   project     = "first-renderer-376510" # <PROJECT_ID>
   region      = "asia-southeast2"
-  credentials = var.google_credentials
+  credentials = var.credentials[0].google
 }
 
 ##### K8S MASTER NODE #####
@@ -25,6 +25,18 @@ resource "google_compute_instance" "k8s_master_node" {
     }
   }
   metadata_startup_script = var.startup_script[0].master
+  provisioner "remote-exec" {
+    inline = ["echo 'Wait until SSH is ready'"]
+    connection {
+      type        = "ssh"
+      user        = var.credentials[0].k8s-master-ssh-user
+      private_key = file(var.credentials[0].private-key-master)
+      host        = self.network_interface.0.access_config.0.nat_ip
+    }
+  }
+  provisioner "local-exec" {
+    command = "ansible-playbook -i ${self.network_interface.0.access_config.0.nat_ip}, --private-key ${var.credentials[0].private-key-master} k8s-master.yaml"
+  }
 }
 
 ##### K8S WORKER NODE #####
@@ -47,6 +59,18 @@ resource "google_compute_instance" "k8s_worker_node_a" {
     access_config {
       // Ephemeral public IP
     }
+  }
+  provisioner "remote-exec" {
+    inline = ["echo 'Wait until SSH is ready'"]
+    connection {
+      type        = "ssh"
+      user        = var.credentials[0].k8s-worker-ssh-user
+      private_key = file(var.credentials[0].private-key-worker)
+      host        = self.network_interface.0.access_config.0.nat_ip
+    }
+  }
+  provisioner "local-exec" {
+    command = "ansible-playbook -i ${self.network_interface.0.access_config.0.nat_ip}, --private-key ${var.credentials[0].private-key-worker} k8s-worker.yaml"
   }
   metadata_startup_script = var.startup_script[0].worker
 }
@@ -72,6 +96,18 @@ resource "google_compute_instance" "k8s_worker_node_b" {
       // Ephemeral public IP
     }
   }
+  provisioner "remote-exec" {
+    inline = ["echo 'Wait until SSH is ready'"]
+    connection {
+      type        = "ssh"
+      user        = var.credentials[0].k8s-worker-ssh-user
+      private_key = file(var.credentials[0].private-key-worker)
+      host        = self.network_interface.0.access_config.0.nat_ip
+    }
+  }
+  provisioner "local-exec" {
+    command = "ansible-playbook -i ${self.network_interface.0.access_config.0.nat_ip}, --private-key ${var.credentials[0].private-key-worker} k8s-worker.yaml"
+  }
   metadata_startup_script = var.startup_script[0].worker
 }
 
@@ -95,6 +131,18 @@ resource "google_compute_instance" "k8s_worker_node_c" {
     access_config {
       // Ephemeral public IP
     }
+  }
+  provisioner "remote-exec" {
+    inline = ["echo 'Wait until SSH is ready'"]
+    connection {
+      type        = "ssh"
+      user        = var.credentials[0].k8s-worker-ssh-user
+      private_key = file(var.credentials[0].private-key-worker)
+      host        = self.network_interface.0.access_config.0.nat_ip
+    }
+  }
+  provisioner "local-exec" {
+    command = "ansible-playbook -i ${self.network_interface.0.access_config.0.nat_ip}, --private-key ${var.credentials[0].private-key-worker} k8s-worker.yaml"
   }
   metadata_startup_script = var.startup_script[0].worker
 }

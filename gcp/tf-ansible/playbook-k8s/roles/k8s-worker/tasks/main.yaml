@@ -1,0 +1,5 @@
+---
+- name: Install K8s worker
+  shell: "bash <(curl -s https://raw.githubusercontent.com/xhilmi/kubernetes/master/tools/k8s-install-noprompt-worker.sh)"
+  args:
+    executable: /bin/bash

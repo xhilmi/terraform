@@ -14,13 +14,34 @@
   - echo $AWS_DEFAULT_PROFILE
   - export AWS_PROFILE=<PROFILE_NAME>
   - echo $AWS_PROFILE
+  - cat ~/.aws/credentials
+  - nano ~/.aws/credentials
   - aws configure
+  - aws configure list-profiles
   - aws sts get-caller-identity
+
   - aws ec2 describe-instance-types [https://aws.amazon.com/ec2/instance-types]
   - aws ec2 describe-instance-types --filters "Name=instance-type,Values=t2"
   - aws ec2 describe-instance-types --filters "Name=instance-type,Values=t*" --query 'InstanceTypes[*].[InstanceType,VCpuInfo.DefaultVCpus,MemoryInfo.SizeInMiB]' --output table
+  
   - aws ec2 describe-instance-types --filters "Name=instance-type,Values=t*" --query 'sort_by(InstanceTypes, &MemoryInfo.SizeInMiB)[*].[InstanceType,VCpuInfo.DefaultVCpus,MemoryInfo.SizeInMiB]' --output table | sed '1s/^/-------------------------------\n| InstanceType | CPU | Memory |\n/'
+  
   - aws ec2 describe-instance-types --filters "Name=current-generation,Values=true" "Name=memory-info.size-in-mib,Values=65536" --query "InstanceTypes[*].cll
   [InstanceType]" --output text | sort
+  
+  - aws ec2 describe-instances --filters "Name=instance-type,Values=t2*" --query "Reservations[].Instances[].[InstanceId, State.Name, Placement.AvailabilityZone, PublicIpAddress, InstanceType]" --output table
+  
+  - aws ec2 describe-images --filters "Name=name,Values=*ubuntu*" --query 'Images[*].[Name,ImageId,CreationDate]' --output table
+  
+  - aws ec2 describe-images --owners amazon --filters "Name=name,Values=*ubuntu*" "Name=architecture,Values=x86_64" --query 'Images[*].[Name,ImageId,CreationDate]' --output table
+
+  - aws ec2 describe-images --filters "Name=name,Values=*ubuntu*" "Name=architecture,Values=x86_64" "Name=owner-alias,Values=aws-quickstart" --query 'Images[*].[Name,ImageId,CreationDate]' --output table
+
+  - aws ec2 describe-images --owners amazon --filters "Name=name,Values=*ubuntu/images/hvm-ssd/*" "Name=architecture,Values=x86_64" "Name=virtualization-type,Values=hvm" "Name=description,Values=*Canonical*" --query 'Images[*].[Name,ImageId,CreationDate]' --output table
+
+  - aws ec2 describe-images --owners amazon --filters "Name=name,Values=*ubuntu/images/hvm-ssd/ubuntu-jammy-22.04*" "Name=architecture,Values=x86_64" "Name=virtualization-type,Values=hvm" "Name=description,Values=*Canonical*" --query 'Images[*].[Name,ImageId,CreationDate]' --output table
+
+  - aws ec2 describe-images --owners amazon --filters "Name=name,Values=*ubuntu/images/hvm-ssd/ubuntu-jammy-22.04*" "Name=architecture,Values=x86_64" "Name=virtualization-type,Values=hvm" "Name=description,Values=*Canonical*" --query 'Images[?CreationDate < `2021-01-01` || CreationDate >= `2023-01-01`].[Name,ImageId,CreationDate]' --output table
+
   - aws ec2 describe-subnets
   - aws ec2 describe-vpcs

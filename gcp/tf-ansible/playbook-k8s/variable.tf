@@ -1,7 +1,19 @@
-variable google_credentials {
-  description = "google_credentials"
-  type        = string
+# variable google_credentials {
+#   description = "google_credentials"
+#   type        = string
+# }
+
+variable credentials {
+  description = "credentials"
+  type        = list(object({
+      google                = string
+      k8s-master-ssh-user   = string
+      private-key-master    = string
+      k8s-worker-ssh-user   = string
+      private-key-worker    = string
+  }))
 }
+
 
 variable machine_zone {
   description = "machine_zone"
