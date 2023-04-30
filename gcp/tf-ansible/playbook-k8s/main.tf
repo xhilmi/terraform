@@ -1,9 +1,9 @@
-# # define provider
-# provider "google" {
-#   project     = "agrisoye" # <PROJECT_ID>
-#   region      = "asia-southeast2"
-#   credentials = var.credentials[0].google
-# }
+# define provider
+provider "google" {
+  project     = "agrisoye" # <PROJECT_ID>
+  # region      = "asia-southeast2"
+  # credentials = var.credentials[0].google
+}
 
 ##### K8S MASTER NODE #####
 # create instance master node
