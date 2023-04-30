@@ -1,4 +1,4 @@
-google_credentials = "/path/to/file/project-id.json"
+google_credentials = "../../../<GOOGLE_AUTH>.json"
 
 machine_zone = "us-west2-a"
 startup_script = "sudo ufw disable && sudo service ufw stop"

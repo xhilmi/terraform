@@ -1,4 +1,4 @@
-google_credentials = "../../../../../../gcloud-auth.json" # /path/<filename>.json
+google_credentials = "../../../../../../<YOUR_GOOGLE_AUTH>.json" # /path/<filename>.json
 
 # machine_zone = "us-west2-a"
 

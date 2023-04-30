@@ -10,4 +10,4 @@ secondary_ip_cidr_range = [
     {name: "dev-secondary-02", range: "192.168.11.0/24"}
 ]
 
-google_credentials = "path/to/file/project-id.json"
+google_credentials = "../../../<YOUR_GOOGLE_AUTH>.json"

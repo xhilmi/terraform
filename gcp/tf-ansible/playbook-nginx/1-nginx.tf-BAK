@@ -1,5 +1,5 @@
 locals {
-  project_id       = "first-renderer-376510"
+  project_id       = "<PROJECT_ID>"
   network          = "default"
   image            = "ubuntu-2204-jammy-v20230421"
   ssh_user         = "ansible"
