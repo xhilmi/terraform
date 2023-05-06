@@ -11,7 +11,7 @@ variable "instance_name" {
 }
 
 variable "instance_type" {
-        default = "t3a.medium"
+        default = "t3.medium"
 }
 
 # https://ap-southeast-1.console.aws.amazon.com/vpc/
@@ -28,7 +28,7 @@ variable "ami_id" {
 
 variable "number_of_instances" {
         description = "number of instances to be created"
-        default = 2
+        default = 3
 }
 
 # variable "ami_key_pair_name" {

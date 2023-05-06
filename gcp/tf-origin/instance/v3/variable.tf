@@ -6,10 +6,18 @@ variable google_credentials {
 variable machine_zone {
   description = "machine_zone"
   type        = list(object({
-      us-west2                = string
-      asia-southeast2         = string
-      australia-southeast2    = string
-      europe-west2            = string
+      us-central1                     = string
+      us-west1                        = string
+      northamerica-northeast1         = string
+      northamerica-northeast2         = string
+  }))
+}
+
+variable machine_type {
+  description = "machine_type"
+  type        = list(object({
+      e2-small                      = string
+      e2-medium                     = string
   }))
 }
 

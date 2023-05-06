@@ -1,13 +1,17 @@
-google_credentials = "../../../../../../<YOUR_GOOGLE_AUTH>.json" # /path/<filename>.json
-
-# machine_zone = "us-west2-a"
+google_credentials = "../../../../../../gcloud-auth.json"
 
 machine_zone = [
-  { us-west2                  : "us-west2-a",
-    asia-southeast2           : "asia-southeast2-a",
-    australia-southeast2      : "australia-southeast2-a",
-    europe-west2              : "europe-west2-a",
-   },
+  { us-central1                   : "us-central1-a",
+    us-west1                      : "us-west1-a",
+    northamerica-northeast1       : "northamerica-northeast1-a",
+    northamerica-northeast2       : "northamerica-northeast2-a",
+  },
+]
+
+machine_type = [
+  { e2-small: "e2-small",
+    e2-medium: "e2-medium",
+    },
 ]
 
 startup_script = [
@@ -15,6 +19,23 @@ startup_script = [
     worker: "sudo ufw disable && sudo service ufw stop",
     },
 ]
+
+network_interface = "default"
+
+# v0
+boot_disk = [
+  { image: "ubuntu-os-cloud/ubuntu-2204-lts",
+    size: 40,
+    type: "pd-balanced",
+    tags: "k8s_master_node"
+    },
+  { image: "ubuntu-os-cloud/ubuntu-2204-lts",
+    size: 20,
+    type: "pd-balanced",
+    tags: "k8s_worker_node"
+    },
+]
+
 
 # v0
 # startup_script = [
@@ -78,25 +99,10 @@ startup_script = [
 #   }
 # ]
 
-
-network_interface = "default"
-
-# v0
-boot_disk = [
-  { image: "ubuntu-os-cloud/ubuntu-2204-lts",
-    size: 40,
-    type: "pd-balanced",
-    tags: "k8s_master_node"
-    },
-  { image: "ubuntu-os-cloud/ubuntu-2204-lts",
-    size: 20,
-    type: "pd-balanced",
-    tags: "k8s_worker_node"
-    },
-]
-
 # v1
 # boot_disk = [
 #  {image: "ubuntu-os-cloud/ubuntu-2204-lts", size: 40, type: "pd-balanced", tags: "k8s_master_node"},
 #  {image: "ubuntu-os-cloud/ubuntu-2204-lts", size: 20, type: "pd-balanced", tags: "k8s_worker_node"},
 #]
+
+# machine_zone = "us-west2-a"

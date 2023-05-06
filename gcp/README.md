@@ -51,6 +51,8 @@
 - gcloud compute zones list --filter="name~'asia-southeast'"
 - gcloud compute zones list --filter="region~'asia-southeast'"
 - gcloud compute zones list --filter="name~'asia-southeast' region~'asia-southeast'"
+- for zone in "us-central1" "us-west1" "northamerica-northeast1" "northamerica-northeast2"; gcloud compute zones list --filter="name~$zone region~$zone"; end;
+- for zone in "us-central1" "us-west1" "northamerica-northeast1" "northamerica-northeast2"; do gcloud compute zones list --filter="name~'$zone' region~'$zone'"; done;
 
 # Sitemap repository
 - [tf-example](https://github.com/xhilmi/terraform/tree/master/google-cloud/tf-example) = login and tested service accounts auth 
