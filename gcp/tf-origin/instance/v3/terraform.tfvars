@@ -25,7 +25,7 @@ network_interface = "default"
 # v0
 boot_disk = [
   { image: "ubuntu-os-cloud/ubuntu-2204-lts",
-    size: 40,
+    size: 20,
     type: "pd-balanced",
     tags: "k8s_master_node"
     },
