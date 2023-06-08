@@ -1,5 +1,5 @@
 credentials = [
-    {   google                  : "../../../gcloud-auth.json", # /path/<filename>.json
+    {   google                  : "../../../../../gcloud-auth.json", # /path/<filename>.json
         k8s-master-ssh-user     : "ansible-k8s-master",
         k8s-worker-ssh-user     : "ansible-k8s-worker",
         private-key-master      : "~/.ssh/ansible-k8s-master",
@@ -8,10 +8,10 @@ credentials = [
 ]
 
 machine_zone = [
-    {   us-west2                : "us-west2-a",
-        asia-southeast2         : "asia-southeast2-a",
-        australia-southeast2    : "australia-southeast2-a",
-        europe-west2            : "europe-west2-a",
+    {   us-central1                   : "us-central1-a",
+        us-west1                      : "us-west1-a",
+        northamerica-northeast1       : "northamerica-northeast1-a",
+        northamerica-northeast2       : "northamerica-northeast2-a",
     },
 ]
 

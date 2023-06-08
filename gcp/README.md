@@ -24,7 +24,9 @@
 # Usefull Command gCloud CLI 
 - gcloud init
 - gcloud auth login
+- gcloud auth revoke
 - gcloud auth application-default login
+- gcloud auth application-default revoke
 - gcloud projects list
 - gcloud projects list --sort-by=projectId --limit=5
 - gcloud config set project <PROJECT_ID>
