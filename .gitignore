@@ -16,6 +16,7 @@ hashicorp
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.json
 
 # Crash log files
 crash.log
